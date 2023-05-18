@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shades - Memories</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+    body {
+      background-color: #3488a7;
+      font-family: 'Indie Flower', cursive;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      margin-top: 20px;
+    }
+
+    .grid-item {
+      text-align: center;
+      padding: 10px;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .slideshow-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    .slideshow-container .slide {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .quote-container {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .quote {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .playlist-container {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .playlist {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    video{
+      width:300px ;
+      height:380px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quote-container">
+    <h2>Friendship</h2>
+    <div class="quote">
+      <p>"Friendship is born at that moment when one person says to another: 'What! You too? I thought I was the only one.'" - C.S. Lewis</p>
+    </div>
+    <div class="quote">
+      <p>"A true friend is someone who is always there during the ups and downs, joys and sorrows, and supports you unconditionally." - Unknown</p>
+    </div>
+    <div class="quote">
+      <p>"Friendship isn't about whom you have known the longest, it's about who came and never left your side." - Yolanda Hadid</p>
+    </div>
+  </div>
+  <hr>
+  <br><br>
+  <h1>Memories with Shades</h1>
+  
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="img1.jpg" alt="Memory 1">
+      <p>Memory 1</p>
+    </div>
+    <div class="slide">
+      <img src="img2.jpg" alt="Memory 2">
+      <p>Memory 2</p>
+    </div>
+    <div class="slide">
+      <img src="img3.jpg" alt="Memory 3">
+      <p>Memory 3</p>
+    </div>
+    <div class="slide">
+      <img src="img4.jpg" alt="Memory 4">
+      <p>Memory 4</p>
+    </div>
+    <div class="slide">
+      <img src="img5.jpg" alt="Memory 5">
+      <p>Memory 5</p>
+    </div>
+    <div class="slide">
+      <img src="img6.jpg" alt="Memory 6">
+      <p>Memory 6</p>
+    </div>
+    <div class="slide">
+      <img src="img7.jpg" alt="Memory 7">
+      <p>Memory 7</p>
+    </div>
+    <div class="slide">
+      <img src="img8.jpg" alt="Memory 8">
+      <p>Memory 8</p>
+    </div>
+    <div class="slide">
+      <img src="img9.jpg" alt="Memory 9">
+      <p>Memory 9</p>
+    </div>
+    <div class="slide">
+      <img src="img10.jpg" alt="Memory 10">
+      <p>Memory 10</p>
+    </div>
+    <div class="slide">
+      <img src="img11.jpg" alt="Memory 11">
+      <p>Memory 11</p>
+    </div>
+    <div class="slide">
+      <img src="IMG12.jpg" alt="Memory 12">
+      <p>Memory 12</p>
+    </div>
+    
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <hr>
+  <div class="grid-container">
+    <div class="grid-item">
+      <video src="Snapchat-1994015094.mp4" controls></video>
+    </div>
+    <div class="grid-item">
+      <video src="2023-03-18-190346893.mp4" controls></video>
+    </div>
+    <div class="grid-item">
+      <video src="VID-20230311-WA0022.mp4" controls></video>
+    </div>
+  </div>
+  <br><br><br>
+  <h1>Thank-You!</h1>
+  <div class="quote-container">
+    <div class="quote">
+      <p>I wanted to take a moment to express my heartfelt appreciation for you. Your presence in my life has brought immeasurable joy, love, and happiness. You have a remarkable ability to brighten even the darkest of days with your infectious laughter and genuine kindness.</p>
+    </div>
+    <div class="quote">
+      <p>I appreciate you more than words can convey, and I look forward to creating many more beautiful memories together. You are a remarkable soul, and I am grateful for the friendship we share.</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="playlist-container">
+    <h2>I made this playlist for you!</h2>
+    <iframe src="https://open.spotify.com/embed/playlist/1LoORepXxwZRgWFmWtvG2p" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <p class="playlist">Listen to Shades' favorite songs on Spotify</p>
+  </div>
+  
+  <script>
+    var slides = document.querySelectorAll('.slide');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide, 2000);
+
+    function nextSlide() {
+      slides[currentSlide].style.display = 'none';
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].style.display = 'block';
+    }
+  
+  </script>
+</body>
+</html>
